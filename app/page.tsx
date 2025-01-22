@@ -12,10 +12,26 @@ import Link from "next/link"
 
 export default function Home() {
   const [stars, setStars] = useState<number>(0)
+  // Remove these lines
+  // const [textIndex, setTextIndex] = useState(0)
+
+  const texts = [
+    "Build the Automate Workflow for Your mobile",
+    "Seamless connectivity across devices",
+    "Secure file sharing made simple",
+    "Boost your productivity with Entangle",
+  ]
 
   useEffect(() => {
     // Simulated GitHub stars count - replace with actual API call if needed
     setStars(1337)
+
+    // Remove this useEffect
+    // const interval = setInterval(() => {
+    //   setTextIndex((prevIndex) => (prevIndex + 1) % texts.length)
+    // }, 5000)
+
+    // return () => clearInterval(interval)
   }, [])
 
   const fadeInUp = {
@@ -88,7 +104,7 @@ export default function Home() {
                 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-foreground"
                 variants={fadeInUp}
               >
-                Build the Automate Workflow for Your mobile
+               Build Automate Workflow for Your mobile
               </motion.h2>
               <motion.p
                 className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0"
@@ -106,16 +122,19 @@ export default function Home() {
                   Download for Android
                 </Button>
                 <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto text-lg px-8 py-6" disabled>
-                  <Image src="/apple.svg" alt="Appple" width={24} height={24} />
+                  <Image src="/apple.svg" alt="Apple" width={24} height={24} />
                   iOS Coming Soon
                 </Button>
               </motion.div>
               <motion.div
                 variants={fadeInUp}
-                className="flex items-center gap-2 text-muted-foreground justify-center md:justify-start"
+                className="flex items-center justify-center md:justify-start gap-4 p-4 bg-primary/5 dark:bg-primary/10 rounded-lg backdrop-blur-sm transition-all hover:bg-primary/10 dark:hover:bg-primary/20"
               >
-                <Code2 className="h-5 w-5" />
-                <span className="text-lg">Proudly open source</span>
+                <Github className="h-8 w-8 text-primary" />
+                <div className="flex flex-col">
+                  <span className="text-lg font-semibold">Proudly open source</span>
+                  <span className="text-sm text-muted-foreground">Join our community on GitHub</span>
+                </div>
               </motion.div>
             </motion.div>
             <motion.div
@@ -134,8 +153,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Features Section
-        <section className="py-24 md:py-32 bg-gradient-to-b from-background/90 to-background dark:from-background/50 dark:to-background/80">
+        {/* Features Section */}
+    {/*     <section className="py-24 md:py-32 bg-gradient-to-b from-background/90 to-background dark:from-background/50 dark:to-background/80">
           <div className="container mx-auto px-4">
             <motion.h2
               className="text-3xl sm:text-4xl font-bold text-center mb-16"
@@ -179,7 +198,7 @@ export default function Home() {
               ))}
             </motion.div>
           </div>
-        </section> */}
+        </section>
 
         {/* Download Section */}
         <section className="container mx-auto px-4 py-24 md:py-32">
@@ -206,6 +225,7 @@ export default function Home() {
             </motion.div>
           </div>
         </section>
+        
 
         {/* Footer */}
         <footer className="border-t border-primary/10 bg-background/50 dark:bg-card/20 backdrop-blur-sm">
