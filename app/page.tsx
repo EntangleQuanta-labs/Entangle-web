@@ -117,11 +117,15 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4 pt-6 justify-center md:justify-start"
                 variants={fadeInUp}
               >
-                <Button size="lg" className="gap-2 w-full sm:w-auto text-lg px-8 py-6">
+                <Button size="lg" 
+                className="gap-2 w-full sm:w-auto text-lg px-8 py-6" 
+                onClick={() => window.open("https://forms.gle/WMBEVddvDetcMWyx6")}>
                   <Download className="h-6 w-6" />
                   Download for Android
                 </Button>
-                <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto text-lg px-8 py-6" disabled>
+                <Button size="lg" variant="outline" 
+                className="gap-2 w-full sm:w-auto text-lg px-8 py-6" 
+                onClick={() => alert("iOS version coming soon!")}>
                   <Image src="/apple.svg" alt="Apple" width={24} height={24} />
                   iOS Coming Soon
                 </Button>
@@ -129,7 +133,8 @@ export default function Home() {
               <motion.div
                 variants={fadeInUp}
                 className="flex items-center justify-center md:justify-start gap-4 p-4 bg-primary/5 dark:bg-primary/10 rounded-lg backdrop-blur-sm transition-all hover:bg-primary/10 dark:hover:bg-primary/20"
-              >
+                onClick={() => window.open("https://github.com/EntangleQuanta-labs/Entangle")}
+             >
                 <Github className="h-8 w-8 text-primary" />
                 <div className="flex flex-col">
                   <span className="text-lg font-semibold">Proudly open source</span>
