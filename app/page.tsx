@@ -79,7 +79,7 @@ export default function Home() {
               <div className="flex items-center gap-4 order-1 sm:order-2">
                 <ThemeToggle />
                 <motion.a
-                  href="https://github.com/EntangleQuanta-labs/Entangle-web"
+                  href="https://github.com/EntangleQuanta-labs/Entangle"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 bg-primary/10 hover:bg-primary/20 px-4 py-2 rounded-full transition-colors backdrop-blur-sm"
@@ -87,7 +87,9 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Github className="h-5 w-5" />
-                  <span className="font-medium">{stars.toLocaleString()}</span>
+                  <span className="font-medium">Star us GitHub</span>
+
+                  {/* <span className="font-medium">{stars.toLocaleString()}</span> */}
                 </motion.a>
               </div>
             </div>
